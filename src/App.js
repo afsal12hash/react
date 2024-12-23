@@ -1,16 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-import Home from './componets/Home';
+
+import HomeNavbar from './componets/HomeNavbar';
+import ParentProp from './componets/Props/ParentProp';
+
+// import Home from './componets/Home';
+// import Profiles from './componets/Profiles';
+// import Contact from './componets/Contact';
+// import About from './componets/About';
+// import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
+      <div>
+        {/* <HomeNavbar /> */}
+      </div>
+      
+      
+      
 
-      <header className="App-header">
-       <h1>Yusuf Afsal Ahamed Jamal majith jamal meeran jamal afsal jamal</h1>
-       
-      </header>
-      <Home />
+      {/* <Routes>
+        <Route path='/home' element={<Home />} />
+        <Route path='/profile' element={<Profiles />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
+      </Routes> */}
+
+      {/* Props */}
+
+      {/* <ParentProp /> */}
+
+      {<ParentProp/>}
     </div>
   );
   
