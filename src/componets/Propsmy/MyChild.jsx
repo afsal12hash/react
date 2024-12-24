@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Mychild({ mod }) {
+export default function MyChild({ mod }) {
   console.log(mod);
 
   return (

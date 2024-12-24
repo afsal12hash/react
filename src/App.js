@@ -1,7 +1,11 @@
 import './App.css';
 
 import HomeNavbar from './componets/HomeNavbar';
+import MyuseState from './componets/Hooks/MyuseState';
+import UseStateHook from './componets/Hooks/UseStateHook';
 import ParentProp from './componets/Props/ParentProp';
+import MyChild from './componets/Propsmy/Mychild';
+import MyParent from './componets/Propsmy/MyParent';
 
 // import Home from './componets/Home';
 // import Profiles from './componets/Profiles';
@@ -30,7 +34,15 @@ function App() {
 
       {/* <ParentProp /> */}
 
-      {<ParentProp/>}
+      {/* <MyParent/> */}
+
+
+      {/* Hooks */}
+
+{/*<UseStateHook /> */}
+
+   <MyuseState/>
+   
     </div>
   );
   
