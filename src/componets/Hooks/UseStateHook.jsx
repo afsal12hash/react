@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import './themes.css'
 export default function UseStateHook() {
 
     // const [VAR1,VAR2] = useState(initData)
@@ -8,6 +8,7 @@ export default function UseStateHook() {
         VAR2 => update the current state
         initData => inital data ([],{},"",0,true,"Afsal");
     */
+    const [theme,setTheme] = useState('light')
 
     const [count,setCount] = useState(0);
     const [str,setStr] = useState("")
@@ -16,7 +17,21 @@ export default function UseStateHook() {
         setCount(count-1)
     }
   return (
-    <div>
+    <div className={theme} style= {{height:"100vh"}}>
+
+        <button onClick={()=>{
+            if(theme==='light'){
+                setTheme('dark')
+
+            }
+            else {
+                setTheme('light')
+            }
+        }}>
+            {
+                theme
+            }
+        </button>
         <button onClick={()=>{ setCount(count+1) }}>Add</button>
 
         <button onClick={minValue}>Sub</button>

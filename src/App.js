@@ -1,7 +1,11 @@
 import './App.css';
 
 import HomeNavbar from './componets/HomeNavbar';
+import MyUseEffect from './componets/Hooks/MyUseEffect';
+import MyUseRef from './componets/Hooks/MyUseRef';
 import MyuseState from './componets/Hooks/MyuseState';
+import UseEffectHook from './componets/Hooks/UseEffectHook';
+import UseRefHook from './componets/Hooks/UseRefHook';
 import UseStateHook from './componets/Hooks/UseStateHook';
 import ParentProp from './componets/Props/ParentProp';
 import MyChild from './componets/Propsmy/Mychild';
@@ -19,9 +23,9 @@ function App() {
       <div>
         {/* <HomeNavbar /> */}
       </div>
-      
-      
-      
+-
+
+
 
       {/* <Routes>
         <Route path='/home' element={<Home />} />
@@ -39,13 +43,17 @@ function App() {
 
       {/* Hooks */}
 
-{/*<UseStateHook /> */}
+      {/*<UseStateHook /> */}
+      {/* <UseEffectHook /> */}
+        {/* <UseRefHook /> */}
 
-   <MyuseState/>
-   
+      {/* <MyuseState/> */}
+      {/* <MyUseEffect/> */}
+      {/* <MyUseRef /> */}
+
     </div>
   );
-  
+
 }
 
 export default App;
