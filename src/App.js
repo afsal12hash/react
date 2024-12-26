@@ -4,7 +4,9 @@ import HomeNavbar from './componets/HomeNavbar';
 import MyUseEffect from './componets/Hooks/MyUseEffect';
 import MyUseRef from './componets/Hooks/MyUseRef';
 import MyuseState from './componets/Hooks/MyuseState';
+import UseCallbackHook from './componets/Hooks/UseCallbackHook';
 import UseEffectHook from './componets/Hooks/UseEffectHook';
+import UseMemoHook from './componets/Hooks/UseMemoHook';
 import UseRefHook from './componets/Hooks/UseRefHook';
 import UseStateHook from './componets/Hooks/UseStateHook';
 import ParentProp from './componets/Props/ParentProp';
@@ -46,6 +48,8 @@ function App() {
       {/*<UseStateHook /> */}
       {/* <UseEffectHook /> */}
         {/* <UseRefHook /> */}
+        {/* |<UseCallbackHook/> */}
+        <UseMemoHook />
 
       {/* <MyuseState/> */}
       {/* <MyUseEffect/> */}
