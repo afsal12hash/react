@@ -11,6 +11,7 @@ import MyuseState from "./componets/Hooks/MyuseState";
 import UseCallbackHook from "./componets/Hooks/UseCallbackHook";
 import UseEffectHook from "./componets/Hooks/UseEffectHook";
 import UseMemoHook from "./componets/Hooks/UseMemoHook";
+import UseReducerHook from "./componets/Hooks/UseReducerHook";
 import UseRefHook from "./componets/Hooks/UseRefHook";
 import UseStateHook from "./componets/Hooks/UseStateHook";
 import ParentProp from "./componets/Props/ParentProp";
@@ -43,7 +44,10 @@ function App() {
       {/* <UseCallbackHook/> */}
       {/* <UseMemoHook /> */}
       {/* <MainContext /> */}
-      {<MyMain/>}
+        <UseReducerHook />
+
+
+      {/* {<MyMain/>} */}
       {/* <MyuseState/> */}
       {/* <MyUseEffect/> */}
       {/* <MyUseRef /> */}
