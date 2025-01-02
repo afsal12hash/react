@@ -1,4 +1,7 @@
 import "./App.css";
+import Axios from "./componets/Axios/Axios";
+import MyAxios from "./componets/Axios/MyAxios";
+
 
 import HomeNavbar from "./componets/HomeNavbar";
 import MainContext from "./componets/Hooks/Context/MainContext";
@@ -6,6 +9,7 @@ import MyMain from "./componets/Hooks/Context/MyMain";
 import MyUseCallback from "./componets/Hooks/MyUseCallback";
 import MyUseEffect from "./componets/Hooks/MyUseEffect";
 import MyUseMemo from "./componets/Hooks/MyUseMemo";
+import MyUseReducerHook from "./componets/Hooks/MyUseReducerHook";
 import MyUseRef from "./componets/Hooks/MyUseRef";
 import MyuseState from "./componets/Hooks/MyuseState";
 import UseCallbackHook from "./componets/Hooks/UseCallbackHook";
@@ -44,15 +48,17 @@ function App() {
       {/* <UseCallbackHook/> */}
       {/* <UseMemoHook /> */}
       {/* <MainContext /> */}
-        <UseReducerHook />
+        {/* <UseReducerHook /> */}
+        {/* <Axios/> */}
 
-
+<MyAxios/>
       {/* {<MyMain/>} */}
       {/* <MyuseState/> */}
       {/* <MyUseEffect/> */}
       {/* <MyUseRef /> */}
       {/* {< MyUseCallback/>} */}
       {/* {<MyUseMemo/>} */}
+           {/* <MyUseReducerHook/> */}
     </div>
   );
 }
