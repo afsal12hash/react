@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function Axios() {
 
-    const api = 'https://677639d712a55a9a7d0aebd4.mockapi.io/axios1'
+    const api = 'https://677639d712a55a9a7d0aebd4.mockapi.io/axios2'
 
     const initData = {
         username: "",
@@ -20,6 +20,12 @@ export default function Axios() {
                 ...state,
                 [action.field]: action.payload,
             };
+        }
+        else if(action.type === 'update'){
+            return {
+                ...state,
+                ...action.data
+            }
         }
         else {
             return state;
@@ -58,7 +64,47 @@ export default function Axios() {
                 setViews(response.data)
             })
             .catch((error) => { console.log(error); })
-    }, [api])
+    }, [api]);
+
+    /* Edit setup */
+    const [edit,setEdit] = useState(false);
+    function setupEdit(){
+        const id = localStorage.getItem("_id");
+        axios.get(`${api}/${id}`)
+        .then((res)=>{
+            dispatch({
+                type:'update',
+                data:res.data
+            })
+            setEdit(true)
+        })
+        .catch((error) => { console.log(error); })
+    }   
+
+    /* PUT */
+    function handleUpdate(e){
+        e.preventDefault();
+        const id = localStorage.getItem("_id");
+        axios.put(`${api}/${id}`,state)
+        .then(()=>{
+            alert("updated");
+            setEdit(false);
+            localStorage.clear();
+            window.location.reload();
+        })
+        .catch((error) => { console.log(error); })
+    }
+    
+    /* DELETE */
+    
+    function handleDelete(id){
+        axios.delete(`${api}/${id}`)
+        .then(()=>{
+            alert("deleted");
+            window.location.reload();
+        })
+        .catch((error) => { console.log(error); })
+    }
 
     return (
         <div>
@@ -123,9 +169,17 @@ export default function Axios() {
                     <div className="text-center">
                         <button
                             className="btn btn-primary"
-                            onClick={handleSubmit}
+                            onClick={
+                                edit?
+                                handleUpdate:
+                                handleSubmit
+                            }
                         >
-                            Add
+                            {
+                                edit?
+                                "Update Data":
+                                "Add Data"
+                            }
                         </button>
                     </div>
                 </div>
@@ -162,8 +216,17 @@ export default function Axios() {
                                     <td>{item.land}</td>
                                     <td>{item.place}</td>
                                     <td>
-                                        <button className="btn btn-dark">Edit</button>
-                                        <button className="btn btn-danger ms-2">Delete</button>
+                                        <button className="btn btn-dark"
+                                            onClick={()=>{
+                                                localStorage.setItem("_id",item.id);
+                                                setupEdit()
+                                            }}
+                                        >Edit</button>
+                                        <button className="btn btn-danger ms-2"
+                                            onClick={function(){
+                                                handleDelete(item.id)
+                                            }}
+                                        >Delete</button>
                                     </td>
                                 </tr>
                             )

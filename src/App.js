@@ -49,9 +49,9 @@ function App() {
       {/* <UseMemoHook /> */}
       {/* <MainContext /> */}
         {/* <UseReducerHook /> */}
-        {/* <Axios/> */}
+        <Axios/>
 
-<MyAxios/>
+{/* <MyAxios/> */}
       {/* {<MyMain/>} */}
       {/* <MyuseState/> */}
       {/* <MyUseEffect/> */}
