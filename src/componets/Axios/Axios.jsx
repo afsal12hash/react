@@ -1,9 +1,10 @@
 import React, { useEffect, useReducer, useState } from "react";
 
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Axios() {
-
+    const navi = useNavigate()
     const api = 'https://677639d712a55a9a7d0aebd4.mockapi.io/axios2'
 
     const initData = {
@@ -108,7 +109,7 @@ export default function Axios() {
 
     return (
         <div>
-            <form className="card w-50 mx-auto d-block">
+            {/* <form className="card w-50 mx-auto d-block">
                 <div className="card-body">
                     <label htmlFor="" className="form-label">
                         Username
@@ -184,14 +185,77 @@ export default function Axios() {
                     </div>
                 </div>
 
-                {/* <h2>
-          Result <br />
-          username : {state.username} <br />
-          email : {state.email} <br />
-          Password: {state.password} <br />
-          District: {state.land} <br />
-          Password: {state.place} <br />
-        </h2> */}
+                
+            </form> */}
+            <form className="card w-50 mx-auto d-block">
+                <div className="card-body">
+                    <label htmlFor="" className="form-label">
+                        Username
+                    </label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        name="username"
+                        value={state.username}
+                        onChange={handleChange}
+                        id=""
+                    />
+                    <label htmlFor="" className="form-label">
+                        Email
+                    </label>
+                    <input
+                        type="email"
+                        className="form-control"
+                        name="email"
+                        value={state.email}
+                        onChange={handleChange}
+                        id=""
+                    />
+                    <label htmlFor="" className="form-label">
+                        Password
+                    </label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        name="password"
+                        value={state.password}
+                        onChange={handleChange}
+                        id=""
+                    />
+                    <label htmlFor="" className="form-label">
+                        District
+                    </label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        name="land"
+                        value={state.land}
+                        onChange={handleChange}
+                        id=""
+                    />
+                    <label htmlFor="" className="form-label">
+                        State
+                    </label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        name="place"
+                        value={state.place}
+                        onChange={handleChange}
+                        id=""
+                    />
+
+                    <div className="text-center">
+                        <button
+                            className="btn btn-primary"
+                            onClick={handleSubmit}
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </div>
+
+                
             </form>
 
             <table className="table">
@@ -216,10 +280,17 @@ export default function Axios() {
                                     <td>{item.land}</td>
                                     <td>{item.place}</td>
                                     <td>
-                                        <button className="btn btn-dark"
+                                        {/* <button className="btn btn-dark"
                                             onClick={()=>{
                                                 localStorage.setItem("_id",item.id);
                                                 setupEdit()
+                                            }}
+                                        >Edit</button> */}
+
+                                        {/* next page */}
+                                        <button className="btn btn-dark"
+                                            onClick={()=>{
+                                                navi('/edit/'+item.id)
                                             }}
                                         >Edit</button>
                                         <button className="btn btn-danger ms-2"

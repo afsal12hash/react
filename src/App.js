@@ -1,7 +1,7 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Axios from "./componets/Axios/Axios";
 import MyAxios from "./componets/Axios/MyAxios";
-
 
 import HomeNavbar from "./componets/HomeNavbar";
 import MainContext from "./componets/Hooks/Context/MainContext";
@@ -21,6 +21,8 @@ import UseStateHook from "./componets/Hooks/UseStateHook";
 import ParentProp from "./componets/Props/ParentProp";
 import MyChild from "./componets/Propsmy/Mychild";
 import MyParent from "./componets/Propsmy/MyParent";
+import EditAxios from "./componets/Axios/EditAxios";
+import MyEditAxios from "./componets/Axios/MyEditAxios";
 
 // import Home from './componets/Home';
 // import Profiles from './componets/Profiles';
@@ -40,7 +42,6 @@ function App() {
       </Routes> */}
       {/* Props */}
       {/* <ParentProp /> */}
-      {/* <MyParent/> */}
       {/* Hooks */}
       {/*<UseStateHook /> */}
       {/* <UseEffectHook /> */}
@@ -48,17 +49,28 @@ function App() {
       {/* <UseCallbackHook/> */}
       {/* <UseMemoHook /> */}
       {/* <MainContext /> */}
-        {/* <UseReducerHook /> */}
-        <Axios/>
-
-{/* <MyAxios/> */}
+      {/* <UseReducerHook /> */}
+      {/* <Axios/> */}
+      {/* Routing CRUD */}
+      {/* <Routes>
+        <Route path="/" element={<Axios />} />
+        <Route path="/edit/:id" element={<EditAxios />} />
+      </Routes> */}
+      {/* Routing CRUD end */}
+      {/* <MyEditAxios /> */}
+      <Routes>
+        <Route path="/" element={<MyAxios />} />
+       <Route path="/edit/:id" element={<MyEditAxios />} />
+      </Routes>
+      {/* <MyParent/> */}
       {/* {<MyMain/>} */}
       {/* <MyuseState/> */}
       {/* <MyUseEffect/> */}
       {/* <MyUseRef /> */}
       {/* {< MyUseCallback/>} */}
       {/* {<MyUseMemo/>} */}
-           {/* <MyUseReducerHook/> */}
+      {/* <MyUseReducerHook/> */}
+      {/* <MyAxios/> */}
     </div>
   );
 }
