@@ -9,11 +9,17 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 
 import { BrowserRouter } from 'react-router-dom';
 
+/* Redux storage config */
+import ReduxStorage from './componets/Redux/ReduxStorage';
+import { Provider } from 'react-redux';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Provider store={ReduxStorage}>
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

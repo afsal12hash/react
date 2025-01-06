@@ -6,7 +6,7 @@ export default function MyAxios() {
 //  api link 
   const api = "https://677639d712a55a9a7d0aebd4.mockapi.io/axios1"
 
-  const navi = useNavigate()
+  // const navi = useNavigate()
 
   const initData = {
     firstname: "",
@@ -198,17 +198,17 @@ function handleDelete(id){
 
                   <td>{item.zip}</td>
                   <td>
-              {/*     <button className='btn btn-primary'
+                  <button className='btn btn-primary'
                     onClick={()=>{
                       localStorage.setItem("_id",item.id);
                       setupEdit()
                     }}
-                  >Edit</button> */}
-                  <button className='btn btn-primary'
+                  >Edit</button>
+                  {/* <button className='btn btn-primary'
                     onClick={()=>{
                       navi('/edit/'+item.id)
                     }}
-                  >Edit</button>
+                  >Edit</button> */}
             
                   <button className='btn btn-danger ms-2' onClick={()=>{
                     handleDelete(item.id)

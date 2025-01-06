@@ -23,6 +23,7 @@ import MyChild from "./componets/Propsmy/Mychild";
 import MyParent from "./componets/Propsmy/MyParent";
 import EditAxios from "./componets/Axios/EditAxios";
 import MyEditAxios from "./componets/Axios/MyEditAxios";
+import ReduxForm from "./componets/Redux/ReduxForm";
 
 // import Home from './componets/Home';
 // import Profiles from './componets/Profiles';
@@ -57,11 +58,17 @@ function App() {
         <Route path="/edit/:id" element={<EditAxios />} />
       </Routes> */}
       {/* Routing CRUD end */}
+      {/* Redux */}
+      {/* <ReduxForm /> */}
+      {/* Redux end */}
+
+      {/* ====================================M===================================================== */}
+      {/* <MyAxios/> */}
       {/* <MyEditAxios /> */}
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<MyAxios />} />
        <Route path="/edit/:id" element={<MyEditAxios />} />
-      </Routes>
+      </Routes> */}
       {/* <MyParent/> */}
       {/* {<MyMain/>} */}
       {/* <MyuseState/> */}
